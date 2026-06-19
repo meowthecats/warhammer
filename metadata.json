@@ -1,0 +1,6 @@
+{
+  "name": "Warhammer 50+ Hobby Guide",
+  "description": "A beginner-friendly guide to Warhammer 40k and the Necron faction, tailored for hobbyists aged 50 and over with limited time and resource budgets. Includes simple painting guides, low-cost roster planners, and local game stores near Germantown, Maryland.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
