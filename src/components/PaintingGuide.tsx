@@ -9,57 +9,57 @@ interface Props {
 const SHIELD_PAINT_STEPS: PaintStep[] = [
   {
     stepNumber: 1,
-    title: 'Prep, Handle & Mount',
-    technique: 'Assembly Optimization',
-    description: 'Assemble your model using Tamiya Extra Thin Cement. To protect your hands and prevent finger fatigue, attach your finished model to the cap of an empty pill bottle or soda bottle using a cherry-sized ball of blue Tac (poster putty).',
-    lowDexterityTip: 'Do not hold the tiny 32mm model base with your fingertips. Holding a thick pill bottle relaxes hand pressure, reduces joint aches, and prevents accidentally smudging wet paint with your thumbs.',
+    title: 'Stick the tiny plastic guy to a bottle cap',
+    technique: 'Hodgepodge Assembly',
+    description: 'Okay, first, you glue the robot dude together using basic cement glue. But here is the ultimate life-saver: those tiny plastic guys are impossible to hold without dropped paint everywhere. So, you grab a cherry-sized ball of blue sticky poster putty (sticky tack) and smash the robot\'s circle base onto the top of an old empty pill bottle or soda bottle cap. Now you have a giant handle to hold instead of a tiny toy!',
+    lowDexterityTip: 'Seriously, do NOT try to hold the miniature base with your fingertips. Your hands will cramp up instantly and you will smudge your hard work. Hold the pill bottle like a giant coffee mug.',
     estimatedTimeMinutes: 10,
-    suppliesNeeded: ['Model sprue', 'Tamiya Cement', 'Pill bottle cup', 'Poster Tac'],
+    suppliesNeeded: ['Model sprue', 'Tamiya Cement', 'Pill bottle / Soda cap', 'Sticky poster tack'],
   },
   {
     stepNumber: 2,
-    title: 'The Dark Undercoat',
-    technique: 'Spray Priming outside',
-    description: 'Take your mounted model outside into fresh air. Shake your flat black rattle-can primer for 1 full minute. Stand 8 to 10 inches away, and spray the model in quick, controlled 1-second dusting sweeps. Rotate the model to ensure all angles are coated in deep matte black.',
-    lowDexterityTip: 'If your index finger gets tired or cold while pressing the spray nozzle, purchase a standard slip-on spray-can trigger handle from the hardware store ($3). It mimics a paint-gun and protects your grip.',
+    title: 'Spray-paint him completely pitch black outside',
+    technique: 'Rattle-can spray job',
+    description: 'Go outside because spray paint smells terrible and will coat your kitchen in dark soot. Shake a cheap flat black rattle-spray can around for a full minute like you mean it. Stand about 10 inches back from the robot and do really quick, passing "whoosh" spray sweeps. Turn him around so he is covered in a deep matte black shadow. Do not hold the button down in one spot or he will drown in runny wet tar!',
+    lowDexterityTip: 'If your index finger gets tired or cold from pressing the nozzle, buy a $3 plastic trigger handle from the hardware store that clips onto the spray can. It makes it feel like a toy water pistol and saves your grip.',
     estimatedTimeMinutes: 5,
-    suppliesNeeded: ['Rust-Oleum Flat Black spray can', 'Cardboard backing box'],
+    suppliesNeeded: ['Matte Black spray can', 'A scrap cardboard box to spray inside of'],
   },
   {
     stepNumber: 3,
-    title: 'The Silver Frost (Heavy Drybrush)',
-    technique: 'Drybrushing (Pre-shading)',
-    description: 'Dip your flat, wide drybrush (or cheap soft makeup powder brush) into the Vallejo Gunmetal paint. Immediately rub the brush back and forth intensely on a clean dry paper towel. Once almost NO paint is coming off on the towel, vigorously flick the brush all over the black model.',
-    lowDexterityTip: 'Since drybrushing relies on the bristles only catching raised details, shaky wrist movements actually enhance the weathered metallic texture! Your tremors are a feature here, creating beautiful war-torn armor weathering.',
+    title: 'Tickle him with silver paint (The dollar makeup brush hack)',
+    technique: 'Drybrushing (wipe it all off!)',
+    description: 'Get some silver metallic paint. Now, buy a cheap, soft, fluffy makeup powder brush from the dollar store. Dip the tip of the brush in the silver paint, and then IMMEDIATELY scrub almost all of it off on a paper towel. Seriously, wipe it until the brush looks empty. Then, just dust and flick the brush all over the black robot. Like magic, all his metal bones start glowing silver while the deep crevices stay pitch black!',
+    lowDexterityTip: 'Here is the best secret: if your hands are shaky, this step actually works BETTER! Your natural tremors will hit the edges randomly, making the metal look beautifully weathered and battle-worn.',
     estimatedTimeMinutes: 10,
-    suppliesNeeded: ['Vallejo Gunmetal paint', 'Flab brush / Makeup brush', 'Paper towel'],
+    suppliesNeeded: ['Vallejo Gunmetal paint', 'Dollar store makeup powder brush', 'Paper towel'],
   },
   {
     stepNumber: 4,
-    title: 'Immersion Wash (Shading)',
-    technique: 'All-over Liquid Shading',
-    description: 'Dip your medium synthetic brush into the Army Painter Dark Tone wash. Generously slather this dark liquid ink across the entire metallic model. Let it flow and pool naturally inside joints, metallic ribcages, and muscle splits.',
-    lowDexterityTip: 'No precision or vision strain is required here. The wash pools in the crevices on its own, drawing shadows and creating incredible anatomical depth automatically. Allow 20 minutes to fully air dry.',
+    title: 'Slather on the muddy ink shadow juice',
+    technique: 'Liquid Wash Drenching',
+    description: 'Open up this magical dark watery bottle called "Dark Tone shadow wash." Get your normal paintbrush and literally drench the silver robot in the liquid. Do not try to be neat! Just slop it all over him. The magical dark ink will automatically run away from his silver edges on its own and hide in all his ribcages, hollow joints, and shadows, instantly creating three-dimensional depth.',
+    lowDexterityTip: 'You need zero precision or good eyes here. Slosh it on like gravy on a Sunday roast. Go take a 20-minute coffee break while it air-dries into beautiful shadows.',
     estimatedTimeMinutes: 5,
-    suppliesNeeded: ['Army Painter Dark Tone Wash', '#2 Detail Brush'],
+    suppliesNeeded: ['Army Painter Dark Tone Wash', 'Standard brush', 'Dunking energy'],
   },
   {
     stepNumber: 5,
-    title: 'Chamber & Eyes Neon Glow',
-    technique: 'Contrast Plasma Washing',
-    description: 'Carefully take standard acrylic white paint and dot the tiny ball-spheres inside the Gauss weapon barrels and the center of the Necron chest glyph. Once dry, coat those exact white areas with Tesseract Glow green wash. The glowing green binds perfectly over the white base, popping instantly!',
-    lowDexterityTip: 'Brace your wrists together! If painting the glowing eyes is too difficult for your eyesight, bypass eyes entirely. Just drybrush the green weapon tubes. It looks wonderful even without glowing eyes!',
+    title: 'Make details shine with radioactive neon green',
+    technique: 'Contrast glow cheat-code',
+    description: 'We need glowing guns and power-cores. Doing glowing effects usually takes expert blending, but here is our ultimate shortcut: paint the gun tubes and chest glyph with standard white acrylic paint first. Let it dry completely. Then, sloppy-paint over that white with a bright green glaze called "Tesseract Glow." It magically turns the flat white into a bright neon radioactive green instantly!',
+    lowDexterityTip: 'Brace your wrists/elbows together on the table for double stability. If painting the glowing eyes is too stressful, skip them entirely! Just glowing weapons still look absolutely phenomenal.',
     estimatedTimeMinutes: 8,
-    suppliesNeeded: ['White acrylic paint', 'Citadel Tesseract Glow', '#2 Detail Brush'],
+    suppliesNeeded: ['Basic white acrylic paint', 'Citadel Tesseract Glow', 'Smaller brush'],
   },
   {
     stepNumber: 6,
-    title: 'Sterilized Yard Basing',
-    technique: 'Organic Materials Bonding',
-    description: 'Paint the top of the dynamic plastic circle base with Elmer’s school white glue (PVA). Immediately dip the base into a cup of sterilized garden dirt or fine sifted sand. Shake off the excess, and let dry. You get a perfect desert ruin look for zero cost!',
-    lowDexterityTip: 'To sterilize yard soil: Bake a trowel-scoop on aluminum foil at 200°F (93°C) for 15 minutes. This kills any unseen spores or moisture, preparing it safely for acrylic adhesion.',
+    title: 'Glue actual dirt from your backyard to the stand',
+    technique: 'Backyard excavation',
+    description: 'The solid circle base looks boring. Paint some school-grade Elmer\'s white glue all over the top. Then, scoop a cup of real dirt or sand from your yard and dip his stand right into it! Shake off the extra dirt. Boom, now your metallic robot is standing in a real post-apocalyptic desert wasteland for absolutely zero extra dollars!',
+    lowDexterityTip: 'To avoid bringing yard mold or bug spores into your house, spread the dirt on some foil and bake it in the kitchen oven at 200°F (93°C) for 15 minutes before gluing it.',
     estimatedTimeMinutes: 5,
-    suppliesNeeded: ['Sterilized backyard soil', 'Elmers white glue', 'Old brush to apply glue'],
+    suppliesNeeded: ['Sterilized backyard soil/sand', 'Elmer\'s white school glue', 'Old brush to spread glue'],
   },
 ];
 
@@ -83,10 +83,10 @@ export default function PaintingGuide({ fontSizeFactor }: Props) {
       <div className="border-2 border-editorial-charcoal bg-editorial-paper p-6 rounded shadow-sm">
         <h3 className="text-2xl font-serif font-bold text-editorial-charcoal flex items-center gap-2 mb-2">
           <Award className="text-editorial-forest" />
-          The "Silver Tide" Speed Painting Method
+          The Clueless Beginner's "Silver Tide" Guide
         </h3>
         <p className="text-editorial-charcoal font-serif text-sm leading-relaxed" style={{ fontSize: `${0.95 * fontSizeFactor}rem` }}>
-          Many novices get discouraged when looking at professional painting videos that take 40 hours per model. For our 50+ cohort, we utilize the **Wet Shading & Drybrushing** methodology. It requires zero fine-line tracing, utilizes highly cheap supplies, and generates beautiful metallic cyborg forces that look amazing on Rockville tabletop boards.
+          Look, I have absolutely NO idea what I'm doing half the time, and professional hobby videos with 40-hour painting recipes make me want to sweat. But it turns out you can cheat! By using raw metallic silver drybrushing and wet ink shading, we completely skip fine-line precision. The steps are dirt-cheap, super clear, extremely forgiving of shaky hands, and make your robotic cyborg army look professional on any gaming table!
         </p>
       </div>
 

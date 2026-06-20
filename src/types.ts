@@ -26,7 +26,7 @@ export interface NecronUnit {
 export interface GameStore {
   id: string;
   name: string;
-  city: 'Rockville, MD' | 'Silver Spring, MD' | 'Frederick, MD';
+  city: string;
   address: string;
   distanceFromGermantownMiles: number;
   phone: string;
@@ -36,6 +36,7 @@ export interface GameStore {
   veteranTip: string;
   mapEmbedUrl?: string;
   website: string;
+  services?: string[];
 }
 
 export interface PaintStep {

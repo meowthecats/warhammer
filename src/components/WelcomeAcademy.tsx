@@ -1,11 +1,15 @@
 import React from 'react';
-import { ShieldCheck, Heart, Clock, Compass, Activity, Eye, Hammer, Sparkles, Award } from 'lucide-react';
+import { Heart, Clock, Activity, Eye, Hammer, Award } from 'lucide-react';
+import HobbyProgressChecklist from './HobbyProgressChecklist';
+import WeeklyHobbySchedule from './WeeklyHobbySchedule';
 
 interface Props {
   fontSizeFactor: number;
+  onOpenFaq?: () => void;
 }
 
-export default function WelcomeAcademy({ fontSizeFactor }: Props) {
+export default function WelcomeAcademy({ fontSizeFactor, onOpenFaq }: Props) {
+
   // Editorial font sizes and styling based on font factor
   const getSubHeadingStyle = () => {
     if (fontSizeFactor > 1.22) return 'text-xl font-sans font-bold text-editorial-forest mb-1';
@@ -31,9 +35,29 @@ export default function WelcomeAcademy({ fontSizeFactor }: Props) {
           <p className="text-editorial-charcoal font-serif leading-relaxed max-w-3xl mb-4" style={{ fontSize: `${1 * fontSizeFactor}rem` }}>
             Warhammer 40,000 is often associated with younger players, but tabletop miniatures are a perfect, therapeutic lifetime pursuit. It offers creative satisfaction, cognitive focus, dynamic tactical puzzles, and a friendly local community. 
           </p>
-          <p className="text-editorial-moss font-serif leading-relaxed max-w-3xl" style={{ fontSize: `${0.95 * fontSizeFactor}rem` }}>
+          <p className="text-editorial-moss font-serif leading-relaxed max-w-3xl mb-1" style={{ fontSize: `${0.95 * fontSizeFactor}rem` }}>
             If you have <strong>limited time</strong>, a <strong>modest budget</strong>, or concerns about <strong>hand steadiness or eyesight</strong>, this guide is crafted specifically for you. We focus on Necrons—an ancient undead legion that is both visually striking and miraculously easy to assemble and paint.
           </p>
+
+          {onOpenFaq && (
+            <div className="mt-6 p-4 bg-editorial-cream border-2 border-editorial-clay rounded flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+              <div className="space-y-1">
+                <span className="text-[10px] font-sans uppercase tracking-[0.2em] font-bold text-editorial-forest block">
+                  ☆ RECOMMENDED FIRST STEP: EXPLORE THE SAGE HANDBOOK
+                </span>
+                <p className="text-xs text-editorial-moss font-serif leading-relaxed max-w-xl">
+                  Have doubts about tremors, saving on paints, complex rules, or finding welcoming, low-pressure players in Maryland? Read our compiled tabletop responses.
+                </p>
+              </div>
+              <button
+                onClick={onOpenFaq}
+                className="w-full md:w-auto px-4 py-2 bg-editorial-forest text-editorial-cream border border-editorial-charcoal hover:bg-opacity-90 transition-all font-sans text-xs uppercase tracking-wider font-bold rounded shadow-sm shrink-0 cursor-pointer text-center"
+                id="academy-faq-banner-button"
+              >
+                Browse Hobby FAQ
+              </button>
+            </div>
+          )}
         </div>
       </div>
 
@@ -161,6 +185,12 @@ export default function WelcomeAcademy({ fontSizeFactor }: Props) {
           </ul>
         </div>
       </div>
+
+      {/* Weekly Hobby Schedule Tool */}
+      <WeeklyHobbySchedule fontSizeFactor={fontSizeFactor} />
+
+      {/* Interactive Hobby Progress Checklist */}
+      <HobbyProgressChecklist fontSizeFactor={fontSizeFactor} />
 
       {/* Motivational Closing Quote */}
       <div className="border-l-4 border-editorial-forest bg-editorial-paper p-4 italic text-editorial-forest leading-relaxed text-sm max-w-4xl" style={{ fontSize: `${0.9 * fontSizeFactor}rem` }}>

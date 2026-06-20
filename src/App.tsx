@@ -10,7 +10,8 @@ import {
   Minus, 
   Plus, 
   Compass, 
-  Award
+  Award,
+  HelpCircle
 } from 'lucide-react';
 
 import WelcomeAcademy from './components/WelcomeAcademy';
@@ -19,12 +20,14 @@ import HobbyTools from './components/HobbyTools';
 import NecronListBuilder from './components/NecronListBuilder';
 import PaintingGuide from './components/PaintingGuide';
 import LocalStores from './components/LocalStores';
+import HobbyFAQ from './components/HobbyFAQ';
 
 type AppTab = 'academy' | 'lore' | 'tools' | 'builder' | 'paint' | 'stores';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<AppTab>('academy');
   const [fontSizeFactor, setFontSizeFactor] = useState<number>(1.0); // 1.0 = standard, 1.15 = large, 1.3 = X-large
+  const [isFaqOpen, setIsFaqOpen] = useState<boolean>(false);
 
   // Adjust scale togglers
   const increaseFont = () => {
@@ -68,31 +71,45 @@ export default function App() {
               </p>
             </div>
 
-            {/* Sizing Controller Option for optimal viewing comfort */}
-            <div className="flex items-center gap-3 bg-editorial-paper border border-editorial-clay p-2.5 rounded shadow-sm self-stretch lg:self-auto justify-between sm:justify-start">
-              <span className="text-[10px] font-sans uppercase tracking-wider font-bold text-editorial-moss">
-                Print Contrast & Size:
-              </span>
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={decreaseFont}
-                  disabled={fontSizeFactor <= 1.0}
-                  className="p-1 px-2.5 bg-editorial-cream hover:bg-editorial-clay border border-editorial-charcoal text-editorial-charcoal disabled:opacity-30 cursor-pointer text-xs font-bold font-sans rounded"
-                  title="Smaller print style"
-                >
-                  A-
-                </button>
-                <span className="text-xs font-mono font-bold text-editorial-forest w-14 text-center">
-                  {fontSizeFactor === 1.0 ? '100%' : fontSizeFactor === 1.15 ? '115%' : '130%'}
+            {/* Control Panel Area: Sizing & FAQ Button */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 self-stretch lg:self-auto">
+              {/* Primary FAQ Trigger */}
+              <button
+                onClick={() => setIsFaqOpen(true)}
+                className="flex items-center justify-center gap-2 px-4 py-2 bg-editorial-forest hover:bg-opacity-90 active:translate-y-px transition-all text-editorial-cream border-2 border-editorial-charcoal text-xs font-sans uppercase tracking-[0.1em] font-bold rounded shadow-sm hover:shadow-md cursor-pointer"
+                title="Open common beginner tabletop Questions & Answers"
+                id="header-faq-trigger"
+              >
+                <HelpCircle size={14} className="shrink-0 text-[#e2e8e3]" />
+                <span>Hobby FAQ Guide</span>
+              </button>
+
+              {/* Sizing Controller Option for optimal viewing comfort */}
+              <div className="flex items-center justify-between sm:justify-start gap-4 bg-editorial-paper border border-editorial-clay p-2 rounded shadow-sm">
+                <span className="text-[10px] font-sans uppercase tracking-wider font-bold text-editorial-moss">
+                  Print Scale:
                 </span>
-                <button
-                  onClick={increaseFont}
-                  disabled={fontSizeFactor >= 1.3}
-                  className="p-1 px-2.5 bg-editorial-cream hover:bg-editorial-clay border border-editorial-charcoal text-editorial-charcoal disabled:opacity-30 cursor-pointer text-xs font-bold font-sans rounded"
-                  title="Larger print style"
-                >
-                  A+
-                </button>
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={decreaseFont}
+                    disabled={fontSizeFactor <= 1.0}
+                    className="p-1 px-2 bg-editorial-cream hover:bg-editorial-clay border border-editorial-charcoal text-editorial-charcoal disabled:opacity-30 cursor-pointer text-xs font-bold font-sans rounded"
+                    title="Smaller print style"
+                  >
+                    A-
+                  </button>
+                  <span className="text-xs font-mono font-bold text-editorial-forest w-12 text-center">
+                    {fontSizeFactor === 1.0 ? '100%' : fontSizeFactor === 1.15 ? '115%' : '130%'}
+                  </span>
+                  <button
+                    onClick={increaseFont}
+                    disabled={fontSizeFactor >= 1.3}
+                    className="p-1 px-2 bg-editorial-cream hover:bg-editorial-clay border border-editorial-charcoal text-editorial-charcoal disabled:opacity-30 cursor-pointer text-xs font-bold font-sans rounded"
+                    title="Larger print style"
+                  >
+                    A+
+                  </button>
+                </div>
               </div>
             </div>
           </header>
@@ -170,7 +187,7 @@ export default function App() {
 
           {/* Tab content hub */}
           <main className="flex-1 font-serif">
-            {activeTab === 'academy' && <WelcomeAcademy fontSizeFactor={fontSizeFactor} />}
+            {activeTab === 'academy' && <WelcomeAcademy fontSizeFactor={fontSizeFactor} onOpenFaq={() => setIsFaqOpen(true)} />}
             {activeTab === 'lore' && <NecronLore fontSizeFactor={fontSizeFactor} />}
             {activeTab === 'tools' && <HobbyTools fontSizeFactor={fontSizeFactor} />}
             {activeTab === 'builder' && <NecronListBuilder fontSizeFactor={fontSizeFactor} />}
@@ -189,6 +206,13 @@ export default function App() {
               <span>The Undying Dynasty</span>
             </div>
           </footer>
+
+          {/* Global Accessible Handbooks FAQs */}
+          <HobbyFAQ 
+            isOpen={isFaqOpen} 
+            onClose={() => setIsFaqOpen(false)} 
+            fontSizeFactor={fontSizeFactor} 
+          />
           
         </div>
       </div>

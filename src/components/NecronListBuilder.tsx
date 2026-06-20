@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Layers, HelpCircle, Flame, Plus, Minus, Info, Clipboard, Sparkles, CheckCircle, Clock } from 'lucide-react';
 import { NecronUnit } from '../types';
+import BudgetTracker from './BudgetTracker';
 
 interface Props {
   fontSizeFactor: number;
@@ -370,6 +371,13 @@ export default function NecronListBuilder({ fontSizeFactor }: Props) {
           </div>
         </div>
       </div>
+
+      {/* Budget Tracker Tool */}
+      <BudgetTracker
+        selectedQuantities={selectedQuantities}
+        necronCatalog={NECRON_CATALOG}
+        fontSizeFactor={fontSizeFactor}
+      />
     </div>
   );
 }
